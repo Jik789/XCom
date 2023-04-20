@@ -1,5 +1,14 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ICard } from '../utils/interfaces';
+
+interface ICard {
+  id?: number;
+  title: string;
+  image: string;
+  date: string;
+  rules: boolean;
+  condition: string;
+  category: string;
+}
 
 const api = createApi({
   reducerPath: 'JikApi',
