@@ -1,28 +1,16 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-interface ICard {
-  id?: number;
-  title: string;
-  image: string;
-  date: string;
-  rules: boolean;
-  condition: string;
-  category: string;
-}
+import { UserGithub } from '../../utils/type';
 
 const api = createApi({
   reducerPath: 'JikApi',
   tagTypes: ['Catalog'],
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://mock-server-api-hcqxe00fv-jik789.vercel.app/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://api.github.com/' }),
   endpoints: (builder) => ({
-    searchProduct: builder.query<ICard[], string>({
-      query: (name: string) => `catalog?title_like=${name}`,
-    }),
-    productForId: builder.query<ICard, number>({
-      query: (id: number) => `catalog/${id}`,
+    searchUser: builder.query<UserGithub, string>({
+      query: (name) => `users/${name}`,
     }),
   }),
 });
 
-export const { useProductForIdQuery, useSearchProductQuery } = api;
+export const { useSearchUserQuery } = api;
 export { api };

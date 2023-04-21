@@ -1,7 +1,17 @@
-import { IRepo } from './interface';
+import { ICommitTable, IProfileTable } from './interface';
 
-type RepoProps = {
-  item: IRepo;
+type ProfileTableProps = {
+  item: IProfileTable;
 };
 
-export type { RepoProps };
+type CommitTableProps = {
+  item: ICommitTable;
+};
+
+type UserGithub = {
+  id: number;
+  login: string;
+  avatar_url: string;
+};
+
+export type { ProfileTableProps, CommitTableProps, UserGithub };

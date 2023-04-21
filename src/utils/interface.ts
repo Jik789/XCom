@@ -1,4 +1,4 @@
-interface IRepo {
+interface IProfileTable {
   id: number;
   name: string;
   language: string;
@@ -6,4 +6,11 @@ interface IRepo {
   stars: number;
 }
 
-export type { IRepo };
+interface ICommitTable {
+  id: number;
+  author: string;
+  hash: string;
+  date: string;
+}
+
+export type { IProfileTable, ICommitTable };

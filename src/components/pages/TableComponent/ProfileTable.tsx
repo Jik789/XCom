@@ -1,13 +1,15 @@
 import React from 'react';
-import { RepoProps } from '../../../utils/type';
+import { ProfileTableProps } from '../../../utils/type';
 
-function ProfileTable(props: RepoProps) {
+function ProfileTable(props: ProfileTableProps) {
   const item = props.item;
 
   return (
     <tr>
       <td>
-        <a href="#">{item.name}</a>
+        <a className="underline decoration-sky-500" href="#">
+          {item.name}
+        </a>
       </td>
       <td>{item.language}</td>
       <td>{item.description}</td>
