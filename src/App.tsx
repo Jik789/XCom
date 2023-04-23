@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
-        <Route path="/commit" element={<CommitPage />}></Route>
+        <Route path="/commit/:repo" element={<CommitPage />}></Route>
       </Routes>
     </>
   );

@@ -1,11 +1,9 @@
-import { ICommitTable } from './interface';
-
 type ProfileTableProps = {
   item: UserRepoGithub;
 };
 
 type CommitTableProps = {
-  item: ICommitTable;
+  item: CommitTable;
 };
 
 type UserGithub = {
@@ -22,4 +20,21 @@ type UserRepoGithub = {
   stargazers_count: number;
 };
 
-export type { ProfileTableProps, CommitTableProps, UserGithub, UserRepoGithub };
+type CommitTable = {
+  sha: number;
+  commit: { author: { name: string; date: string } };
+};
+
+type UserAndRepo = {
+  userName: string;
+  repoName: string;
+};
+
+export type {
+  ProfileTableProps,
+  CommitTableProps,
+  UserGithub,
+  UserRepoGithub,
+  UserAndRepo,
+  CommitTable,
+};

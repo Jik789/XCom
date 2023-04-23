@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ProfileTableProps } from '../../../utils/type';
 
 function ProfileTable(props: ProfileTableProps) {
@@ -7,9 +8,9 @@ function ProfileTable(props: ProfileTableProps) {
   return (
     <tr>
       <td>
-        <a className="underline decoration-sky-500" href="#">
+        <Link className="underline decoration-sky-500" to={`/commit/${item.name}`}>
           {item.name}
-        </a>
+        </Link>
       </td>
       <td>{item.language ?? '-'}</td>
       <td>{item.description ?? '-'}</td>
