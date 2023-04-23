@@ -11,9 +11,9 @@ function ProfileTable(props: ProfileTableProps) {
           {item.name}
         </a>
       </td>
-      <td>{item.language}</td>
-      <td>{item.description}</td>
-      <td>{item.stars}</td>
+      <td>{item.language ?? '-'}</td>
+      <td>{item.description ?? '-'}</td>
+      <td>{item.stargazers_count ?? '0'}</td>
     </tr>
   );
 }

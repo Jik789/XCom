@@ -1,9 +1,6 @@
-interface IProfileTable {
+interface IProfileRepoTable {
   id: number;
   name: string;
-  language: string;
-  description: string;
-  stars: number;
 }
 
 interface ICommitTable {
@@ -13,4 +10,4 @@ interface ICommitTable {
   date: string;
 }
 
-export type { IProfileTable, ICommitTable };
+export type { IProfileRepoTable, ICommitTable };

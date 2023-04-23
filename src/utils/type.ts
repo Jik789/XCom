@@ -1,7 +1,7 @@
-import { ICommitTable, IProfileTable } from './interface';
+import { ICommitTable } from './interface';
 
 type ProfileTableProps = {
-  item: IProfileTable;
+  item: UserRepoGithub;
 };
 
 type CommitTableProps = {
@@ -14,4 +14,12 @@ type UserGithub = {
   avatar_url: string;
 };
 
-export type { ProfileTableProps, CommitTableProps, UserGithub };
+type UserRepoGithub = {
+  id: number;
+  name: string;
+  language: string;
+  description: string;
+  stargazers_count: number;
+};
+
+export type { ProfileTableProps, CommitTableProps, UserGithub, UserRepoGithub };
