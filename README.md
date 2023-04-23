@@ -14,7 +14,7 @@
 - [Tailwind CSS](https://tailwindcss.com/)
 - [GitHub API](https://developer.github.com/v3/)
 
-## Additional tools
+#### Additional tools
 
 - husky
 - eslint
